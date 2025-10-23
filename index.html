@@ -1,4 +1,76 @@
-<body>
-    <p>Hello World</p>
-    <p>TEST</p>   
-</body>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Diego's Portfolio</title>
+        <meta property="og:title" content="Diego's Portfolio" />
+        <meta property="og:description" content="Check out my work!" />
+        <meta property="og:image" content="/static/portfoliothumbnail.jpg" />
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="icon" href="favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    </head>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="aboutme.html">About</a>
+        <a href="mailto:dpuu26@gmail.com" class="contact-link">Contact</a>
+    </nav>
+
+    <body>
+        <main>
+            <h1 class ="name">Diego Perez</h1>
+            <h2 class="job-title">Gameplay Programmer</h2>
+            <div class = "card-holder">
+                <menu class = "links">
+                    <li>
+                        <a href="https://drive.google.com/file/d/1ih5eqKvnmu2JFIs6GeXLbAP-8bxtwbL3/view?usp=drive_link" id="resume-link" target="_blank" rel="noopener noreferrer">
+                            <img src="/images/resume.png" alt="link to email">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:dpuu26@gmail.com" id="email-link">
+                            <img src="/images/email(1).png" alt="link to email">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/diego-perez-uu" id="linkedin-link" target="_blank" rel="noopener noreferrer">
+                            <img src="/images/linkedin.png" alt="link to email">
+                        </a>
+                    </li>
+                </menu>
+            </div>
+            <div class="main-content">
+                <div class="project-holder">
+                    <a class = "project" href="/projects/DirtyWater.html">
+                        <div class="left">
+                            <img src = "/images/DirtyWaterThumbnail.png" alt = "thumbnail for {{ project.title }}">
+                        </div>
+                        <div class="right">
+                            <h2> Dirty Water</h2>
+                            <p class="skills">
+                                Unity, C#, Git, Agile
+                            </p>
+                            <p>Dirty Water is a cozy 2D ocean cleanup game. Play a sam, a scuba diver new to the area. Help by cleaning up the ocean while helping and getting to know the people who live nearby.</p>
+                        </div>
+                    </a>
+                    <a class = "project" href="/projects/Durt.html">
+                        <div class="left">
+                            <img src = "/images/DurtGraphicSource.jpg" alt = "thumbnail for {{ project.title }}">
+                        </div>
+                        <div class="right">
+                            <h2> Durt </h2>
+                            <p class="skills">
+                                Unity, C#, Git, Agile
+                            </p>
+                            <p>Durt is a 2D horror puzzle game. Play as Durt, a cowboy stuck in the mines of the Appalachian Mountains. These mines are filled with terrible creatures that must never be looked at. Durt must carefully shoot if he wants to make it out.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

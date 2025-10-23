@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Diego's Portfolio</title>
+        <meta property="og:title" content="Diego's Portfolio" />
+        <meta property="og:description" content="Check out my work!" />
+        <meta property="og:image" content="/static/portfoliothumbnail.jpg" />
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="icon" href="../favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    </head>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="../aboutme.html">About</a>
+        <a href="mailto:dpuu26@gmail.com" class="contact-link">Contact</a>
+    </nav>
+
+    <body>
+        <h1 class="section-title"> Dirty Water </h1>
+        <div class="project-container">
+            <p>
+                <strong> Skills Used: </strong> C#, Unity 6, Git, Game Development, Agile
+            </p>
+            <iframe frameborder="0" src="https://itch.io/embed/3501432?dark=true" width="208" height="167"><a href="https://czmavery.itch.io/dirty-water">Dirty Water by czmAvery, Diego Perez</a></iframe>
+
+            <h2> About </h2>
+            <p>
+                Dirty Water is a single player 2D game where the player cleans up the ocean while improving the lives of the residents. The game was made to advocate for both cleaner waters and against the excessive use of plastic. Players take on the role of a diver who has recently moved to the area. You will meet a shopkeeper and his granddaughter who wish the ocean was cleaner. Throughout 5 quests you help them see a cleaner ocean. Use materials you collect from the ocean to unlock upgrades to your gear. Relax to Dirty Water's OST and make the ocean beautiful. The game is designed to be cozy and easy to play.
+            </p>
+
+            <img src="/images/SamOnBeach.png" loading="lazy" alt="Sam looking at the ocean">
+            <img src="/images/SamTalking.png" loading="lazy" alt="Sam Talking to NPCs">
+
+            <h2> What I'm most proud of </h2>
+            <h3> Water Shader </h3>
+            <img src="/images/SamSwimming.png" loading="lazy" alt="Sam Swimming in ocean">
+            <p>
+                Using Unity Shader Graph, I implemented a water shader that represents the ocean. This shader has 3 main features.
+
+                First, the water has waves that move toward the shore. These waves may be adjusted for both speed and size.
+
+                Second, I added caustics that give texture to the water.
+
+                Third, I added a gradient to the water such that the water will get progressively darker as the player goes deeper in the ocean.
+
+                Finally, the water acts as a distortion layer to all elements behind it.
+
+                In the future, I would love to also make the water reactive so that when the player jumps in, the water moves.
+            </p>
+
+            <h3> Parallax Background </h3>
+            <p>
+                As the player moves on the shore, the background behind them will parallax.
+            </p>
+
+            <h3> Event based architecture </h3>
+            <p>
+                I developed an event bus that handles all events in the game. This allows for scripts to subscribe to the event and react accordingly. This is incredibly helpful because it allows for easier to read code as well as reducing the need for direct references to game objects.
+            </p>
+            <p>
+                The most beneficial use of the event bus was the implementation of the quest system. The Quest System event controller allows for quests to be started and finished from anywhere. This allowed flexibility with creating quests. Furthermore, NPCs subscribe to quest events and know how to react to a quest being finished.
+            </p>
+            <p>
+                The Event bus is also great for other uses such as an event for when the day ends. The player controller can react accordingly by placing the player back on land and switching the movement scheme to walking vs swimming.
+            </p>
+
+            <h3> The player controller </h3>
+            <p>
+                One of the challenges of development was finding a way to allow the player to both walk on land and swim in the ocean. The challenge is the player must only move left and right on land, but must be able to move in all directions in the ocean. Furthermore, the sprite must change between walking and swimming. Utilizing the event bus, I have he player controller reacting to when the player chooses to enter the water so all elements may switch to swimming.
+            </p>
+
+            <h3> Controller and Keyboard Compatibility </h3>
+            <p>
+                One of the goals going into the game was to allow for both controller and keyboard compatibility. The game is recommended to be played with a controller, but we wanted to allow for keyboard functionality as well without comprising game feel. Using the new Unity Input System, I was able to implement functionality for both a controller and a keyboard without complicating the code. Inputs were given action names and could be utilized as such in the code. For example instead of checking for if the space bar or if the A button were pressed, we instead check if the jump action was triggered.
+            </p>
+
+
+            <h2> Development </h2>
+            <p>
+                This game was made by a team of people for Alternative Game Development at the University of Utah. I worked on this project as the lead software engineer. Much thanks to my team members Madi Behunin, Camren Howard, Tom Glasmann, Hardy Farnsworth, and Tanner Zaitzeff-Johnson for their hard work on this project.
+            </p>
+        </div>
+    </body>
+</html>
